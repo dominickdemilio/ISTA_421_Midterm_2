@@ -3,12 +3,9 @@ Midterm 2, Part 2 for Introduction to Machine Learning
 
 ### Step 1
 
-- First resource
-- Second resource
-
-### Step 2
-
-
+- [First resource](https://pmc.ncbi.nlm.nih.gov/articles/PMC11011876/)
+- [Second resource](https://newsroom.spectrumhealth.org/corewell-health-study-determines-keys-to-reducing-hospital-readmissions/)
+- [Third resource](https://pmc.ncbi.nlm.nih.gov/articles/PMC8101040/)
 
 ### Step 3
 
