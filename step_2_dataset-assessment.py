@@ -10,8 +10,11 @@ df = pd.read_csv(filename, low_memory=False)
 # Look at df shape and other info
 print(df.head())
 print("\nDF Shape:", df.shape)
-print("\nColumns:", df.columns.tolist())
 print("\n")
+
+# Check unique values in columns
+for col in df.columns:
+    print(f"{col}: {df[col].nunique()} unique values")
 df.info()
 print(df.describe())
 
@@ -22,3 +25,9 @@ print(missing_counts)
 # Check to make sure there are no duplicate rowws
 duplicates = df.duplicated().sum()
 print("\nDuplicates: ", duplicates)
+
+# Correlation matrix
+plt.figure(figsize=(12, 8))
+sns.heatmap(df.corr(numeric_only=True), annot=True, fmt=".2f", cmap="coolwarm")
+plt.title("Correlation Matrix")
+plt.show()
