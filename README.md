@@ -24,6 +24,8 @@ Midterm 2, Part 2 for Introduction to Machine Learning
 
 ### Step 4
 
+Research question: Are there consistent over or under performing hospitals across multiple readmission measures?
+
 ### Step 5
 
 ### Step 6
