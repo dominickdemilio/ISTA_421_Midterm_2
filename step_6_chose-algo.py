@@ -90,3 +90,15 @@ y_pred = model.predict(X_test)
 # Use scikit to create a classification report for my model
 # Get valuable metrics like precision, recall, and model accuracy
 print(classification_report(y_test, y_pred))
+
+########################################################################
+# STEP 7: VALIDATING THE MODEL
+########################################################################
+from sklearn.model_selection import cross_val_score
+
+# Cross validate using the accuracy score (5 folds feels appropriate)
+# Not sure if I should be using accuracy or precision/recall for this
+# step, but accuracy can't be too bad
+cv_scores = cross_val_score(model, X, y, cv=5, scoring="accuracy")
+print("Cross-Validation Accuracy Scores: ", cv_scores)
+print("Average Cross-Validation Score: ", cv_scores.mean())

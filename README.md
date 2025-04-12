@@ -30,19 +30,17 @@ Research question: Are there consistent over or under performing hospitals acros
 
 This question is important to the board because they may want to penalize/fine hospitals with excess readmission rates. If a facility consistently underperforms across multiple conditions, it’s likely to repeat penalties, which can translate directly into financial loss. Thus, identifying these patterns here can prioritize prevention and resource allocation, potentially saving the hospital a lot of money and readmissions. On the other end of the spectrum, if a particular facility/hospital is consistently overperforming across multiple conditions, the board can study what this hospital is doing **right** so as to implement/replicate it in other facilities. Finally, from the patients' perspectives, the facilities are only going to improve with this knowledge, resulting in frequently better patient outcomes. 
 
-### Step 6
-
-### Step 7
-
-### Step 8
-
 ### Step 9
 
 - Conclusions: 
+    - My model correctly classified 95% of all 749 hospitals in the test set
 - Predictions: 
 - Recommendations: 
 
 ## Running the Model
-Instructions
+
+Running my model is very simple. I have a random forest model that will run automatically and print a classification report, assuming you run the file "step_6_chose-algo.py" and the dataset is in your working directory. 
 
 ## Disclosures
+
+None
