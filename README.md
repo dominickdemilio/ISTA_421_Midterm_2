@@ -33,13 +33,20 @@ This question is important to the board because they may want to penalize/fine h
 ### Step 9
 
 - Conclusions: 
-    - My model correctly classified 95% of all 749 hospitals in the test set
+    - My model correctly classified 95% of all 749 hospitals in the test set.
+    - My model maintained an average cross-validation accuracy of 93.9%, indicating that it reliably distinguishes between hospitals that consistently overperform and those that underperform on readmission measures.
+    - Aggregating the data to the hospital level confirms the assumption that some facilities/hospitals consistently and systematically underperform across multiple measures. 
 - Predictions: 
+    - My model is capable of identifying hospitals with a higher proportion of metrics indicating excess readmissions. This facilities are prone to higher costs as a penalty. 
+    - Looking at the high precision/recall metrics, predictions about a facility's performance can be drawn with high accuracy. 
 - Recommendations: 
+    - I would recommend the board focus on facilities that are underperforming. As I am not a domain expert, I am not sure what reforms exactly need to take place (perhaps revisiting discharge protocols, follow-up procedures, or best care coordination practices), but it is evident that some facilities can learn/improve their workflows by mimicking an overperforming facility. 
+    - I would also recommend that the board continue to use my model to continue to monitor all facilities. The model is computationally very cheap and runs quite quickly, so this should prove to be an easy adoption. 
+    - Finally, I would recommend the board or underperforming facilities invest towards interventions that promise the highest returns in reducing penalties and improving patient outcomes.
 
 ## Running the Model
 
-Running my model is very simple. I have a random forest model that will run automatically and print a classification report, assuming you run the file "step_6_chose-algo.py" and the dataset is in your working directory. 
+Running my model is very simple. I have a random forest model that will run automatically and print a classification report, assuming you run the file "step_6_chose-algo.py" and the dataset is in your working directory. Step 7 (validation) is also included in that file. 
 
 ## Disclosures
 

@@ -7,11 +7,13 @@ from sklearn.metrics import classification_report  # for precision & recall
 """
 Step 6: Choose Algorithm
 
-In this step, I chose to use Random Forest as the algorithm for classification of facility performance. 
-It is robust, allows for handling of missing values, and is less prone to overfitting as some or the 
-other algorithms discussed in chapters 5-8 of the ISLP. The board would like this model because it 
-identifies specific metrics (features) that have a strong correlation with facilities consistently
-underperforming.
+In this step, I chose to use Random Forest as the algorithm for 
+classification of facility performance. It is robust, allows for 
+handling of missing values, and is less prone to overfitting as 
+some or the other algorithms discussed in chapters 5-8 of the ISLP. 
+The board would like this model because it identifies specific 
+metrics (features) that have a strong correlation with facilities 
+consistently underperforming.
 """
 
 # Load the dataset
@@ -37,11 +39,13 @@ df["End Date"] = pd.to_datetime(df["End Date"], errors="coerce")
 df = df[~df["Excess Readmission Ratio"].isnull()].copy()
 
 # Gauge facility perfomance
-# Label facility as over-performing (0) or under-performing (1) based on the Excess Readmission Ratiol
+# Label facility as over-performing (0) or under-performing (1)
+# based on the Excess Readmission Ratiol
 df["Performance"] = (df["Excess Readmission Ratio"] > 1).astype(int)
 
 # Combine multiple measures into a single calculation
-# Since hospitals have multiple measures/operations, we need to aggregate them so we have one row per hospital
+# Since hospitals have multiple measures/operations, we need to
+# aggregate them so we have one row per hospital
 hospital_df = (
     df.groupby(["Facility Name", "Facility ID", "State"])
     .agg(
@@ -56,7 +60,8 @@ hospital_df = (
     .reset_index()
 )
 
-# If >50% of measures are underperforming, classify the facility as underperforming (1). Else, overperforming (0)
+# If >50% of measures are underperforming, classify the
+# facility as underperforming (1). Else, overperforming (0)
 hospital_df["Final_Performance"] = (hospital_df["Performance"] >= 0.5).astype(
     int
 )
